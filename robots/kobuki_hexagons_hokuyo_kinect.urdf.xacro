@@ -4,6 +4,7 @@
             - Stacks    : hexagons
             - 3d Sensor : hokuyo
         -->
+
 <robot name="turtlebot" xmlns:xacro="http://ros.org/wiki/xacro">
 
   <xacro:include filename="$(find robot_gazebo)/urdf/turtlebot_common_library.urdf.xacro" />
