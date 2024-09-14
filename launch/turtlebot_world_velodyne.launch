@@ -28,6 +28,7 @@
         <arg name="stacks" value="$(arg stacks)"/>
         <arg name="3d_sensor" value="$(arg 3d_sensor)"/>
         <arg name="laser_sensor" value="$(arg laser_sensor)"/>
+        <arg name="mobile_base" default="mobile_base"/>
 	<arg name="initial_pose" value="-x $(arg pose_initial_x) -y $(arg pose_initial_y) -z $(arg pose_initial_theta)"/>
     </include>
 
