@@ -30,7 +30,7 @@
 
     <group ns = "$(arg robot_1)">
         <node pkg="tf" type="static_transform_publisher" name="gazebo_map_broadcaster"
-            args="-1 -1 0 0 0 0  odom gazebo 100"/>
+            args="-1 -1 0 0 0 0 $(arg robot_1)/odom $(arg robot_1)/base_footprint 100"/>
 
         <include file="$(find robot_gazebo)/launch/includes/$(arg base).launch.xml">
             <arg name="base" value="$(arg base)"/>
@@ -51,7 +51,7 @@
 
     <group ns = "$(arg robot_2)">
         <node pkg="tf" type="static_transform_publisher" name="gazebo_map_broadcaster"
-            args="-1 -1 0 0 0 0  odom gazebo 100"/>
+            args="-1 -1 0 0 0 0 $(arg robot_2)/odom $(arg robot_2)/base_footprint 100"/>
 
         <include file="$(find robot_gazebo)/launch/includes/$(arg base).launch.xml">
             <arg name="base" value="$(arg base)"/>
