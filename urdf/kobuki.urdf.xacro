@@ -220,6 +220,16 @@
       </inertial>
     </link>
 
+    <!-- Get grand truth  -->
+    <gazebo>
+      <plugin filename="libgazebo_ros_p3d.so" name="gazebo_ros_p3d">
+        <frameName>map</frameName>
+        <bodyName>base_link</bodyName>
+        <topicName>tracker</topicName>
+        <updateRate>100.0</updateRate>
+      </plugin>
+    </gazebo>
+
     <!-- Kobuki Gazebo simulation details -->
     <xacro:kobuki_sim/>
 
