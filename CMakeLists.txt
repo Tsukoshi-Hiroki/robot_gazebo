@@ -5,6 +5,8 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   sensor_msgs
   std_msgs
+  rospy
+  tf
 )
 
 catkin_package(
@@ -18,3 +20,15 @@ include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
 )
+
+add_executable(odom_tf_converter src/odom_tf_converter.cpp)
+
+target_link_libraries(odom_tf_converter
+  ${catkin_LIBRARIES}
+)
+
+# add_executable(sim1_odom_tf_converter src/sim1_odom_tf_converter.cpp)
+
+# target_link_libraries(sim1_odom_tf_converter
+#   ${catkin_LIBRARIES}
+# )
