@@ -14,7 +14,7 @@ public:
 
   Converter(void)
   {
-    joy_sub_ = nh_.subscribe("/tracker", 100, &Converter::odomCallback, this);
+    joy_sub_ = nh_.subscribe("/tracker", 10, &Converter::odomCallback, this);
   }
   void odomCallback(const nav_msgs::Odometry& msg)
   {

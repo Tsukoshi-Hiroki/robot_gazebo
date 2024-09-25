@@ -78,7 +78,7 @@ Visualization Manager:
       Size (Pixels): 3
       Size (m): 0.009999999776482582
       Style: Flat Squares
-      Topic: /roomba_1/velodyne_points
+      Topic: /kobuki_1/velodyne_points
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
@@ -106,7 +106,7 @@ Visualization Manager:
       Size (Pixels): 3
       Size (m): 0.009999999776482582
       Style: Flat Squares
-      Topic: /roomba_2/velodyne_points
+      Topic: /kobuki_2/velodyne_points
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
@@ -143,7 +143,7 @@ Visualization Manager:
         Shaft Length: 1
         Shaft Radius: 0.05000000074505806
         Value: Arrow
-      Topic: /roomba_1/tracker
+      Topic: /kobuki_1/tracker
       Unreliable: false
       Value: true
     - Angle Tolerance: 0.10000000149011612
@@ -178,7 +178,7 @@ Visualization Manager:
         Shaft Length: 1
         Shaft Radius: 0.05000000074505806
         Value: Arrow
-      Topic: /roomba_2/tracker
+      Topic: /kobuki_2/tracker
       Unreliable: false
       Value: true
     - Alpha: 1
@@ -217,7 +217,7 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Angle: -4.739996433258057
+      Angle: -4.71499490737915
       Class: rviz/TopDownOrtho
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
@@ -227,7 +227,7 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Scale: 96.46293640136719
+      Scale: 48.738914489746094
       Target Frame: <Fixed Frame>
       X: 1.0816199779510498
       Y: 1.4852359294891357

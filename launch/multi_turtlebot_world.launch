@@ -24,12 +24,12 @@
 
   <!-- Place gazebo frame at map frame -->
 
-    <arg name="robot_1"  default="roomba_1"/>
-    <arg name="robot_2" default="roomba_2"/>
-    <arg name="robot_3"  default="roomba_3"/>
+    <arg name="robot_1"  default="kobuki_1"/>
+    <arg name="robot_2" default="kobuki_2"/>
+    <arg name="robot_3"  default="kobuki_3"/>
 
     <group ns = "$(arg robot_1)">
-        <node pkg="tf" type="static_transform_publisher" name="gazebo_map_broadcaster" args="0 0 0 0 0 0 $(arg robot_1)/odom $(arg robot_1)/base_footprint 100"/> 
+        <node pkg="tf" type="static_transform_publisher" name="gazebo_map_broadcaster" args="0 0 0 0 0 0 $(arg robot_1)/odom $(arg robot_1)/base_footprint 10"/> 
         
         <node name="odom_tf_converter" pkg="robot_gazebo" type="odom_tf_converter">
             <param name="pfi" value="/map"/>
@@ -57,7 +57,7 @@
     </group>
 
     <group ns = "$(arg robot_2)">
-        <node pkg="tf" type="static_transform_publisher" name="gazebo_map_broadcaster" args="0 0 0 0 0 0 $(arg robot_2)/odom $(arg robot_2)/base_footprint 100"/>
+        <node pkg="tf" type="static_transform_publisher" name="gazebo_map_broadcaster" args="0 0 0 0 0 0 $(arg robot_2)/odom $(arg robot_2)/base_footprint 10"/>
         
         <node name="odom_tf_converter" pkg="robot_gazebo" type="odom_tf_converter">
             <param name="pfi" value="/map"/>
