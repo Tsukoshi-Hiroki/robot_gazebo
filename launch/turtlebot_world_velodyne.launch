@@ -94,7 +94,7 @@
             <remap from="/tracker" to="/$(arg camera_1)/tracker"/>
         </node>
 
-        <arg name="model" default="$(find realsense2_description)/urdf/test_d435_camera.urdf.xacro"/>
+        <arg name="model" default="$(find robot_gazebo)/robots/test_d435_camera.urdf.xacro"/>
         <arg name="name" default="$(arg camera_1)" />
         <arg name="topics_ns" default="$(arg camera_1)" />
         <arg name="add_plug" default="false" />
@@ -124,7 +124,7 @@
             <remap from="/tracker" to="/$(arg camera_2)/tracker"/>
         </node>
 
-        <arg name="model" default="$(find realsense2_description)/urdf/test_d435_camera.urdf.xacro"/>
+        <arg name="model" default="$(find robot_gazebo)/robots/test_d435_camera.urdf.xacro"/>
         <arg name="name" default="$(arg camera_2)" />
         <arg name="topics_ns" default="$(arg camera_2)" />
         <arg name="add_plug" default="false" />
@@ -154,7 +154,7 @@
             <remap from="/tracker" to="/$(arg camera_3)/tracker"/>
         </node>
 
-        <arg name="model" default="$(find realsense2_description)/urdf/test_d435_camera.urdf.xacro"/>
+        <arg name="model" default="$(find robot_gazebo)/robots/test_d435_camera.urdf.xacro"/>
         <arg name="name" default="$(arg camera_3)" />
         <arg name="topics_ns" default="$(arg camera_3)" />
         <arg name="add_plug" default="false" />
