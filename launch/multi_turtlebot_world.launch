@@ -54,6 +54,11 @@
             <param name="publish_frequency" type="double" value="100.0" />
             <param name="tf_prefix" value="$(arg robot_1)" />
         </node>
+        
+        <include file="$(find robot_gazebo)/launch/pcd_saver.launch">
+            <arg name="robot" value="$(arg robot_1)"/>
+        </include>
+    
     </group>
 
     <group ns = "$(arg robot_2)">
@@ -82,6 +87,11 @@
             <param name="publish_frequency" type="double" value="100.0" />
             <param name="tf_prefix" value="$(arg robot_2)" />
         </node>
+        
+         <include file="$(find robot_gazebo)/launch/pcd_saver.launch">
+            <arg name="robot" value="$(arg robot_2)"/>
+        </include>
+    
     </group>
 
     <!-- Fake laser -->
