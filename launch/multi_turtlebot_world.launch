@@ -31,6 +31,7 @@
     <group ns = "$(arg robot_1)">
         <node pkg="tf" type="static_transform_publisher" name="gazebo_map_broadcaster" args="0 0 0 0 0 0 $(arg robot_1)/odom $(arg robot_1)/base_footprint 10"/> 
         
+        <!-- tf odom to map -->
         <node name="odom_tf_converter" pkg="robot_gazebo" type="odom_tf_converter">
             <param name="pfi" value="/map"/>
             <param name="cfi" value="/$(arg robot_1)/odom"/>
@@ -55,11 +56,12 @@
             <param name="tf_prefix" value="$(arg robot_1)" />
         </node>
 
-        
+        <!-- Save velodyen_pointcloud to pcd -->
         <include file="$(find robot_gazebo)/launch/pcd_saver.launch">
             <arg name="robot" value="$(arg robot_1)"/>
         </include>
     
+        <!-- Velodyen height map -->
         <include file="$(find velodyne_pointcloud)/launch/VLP-32C_points.launch"/>
         <include file="$(find velodyne_height_map)/launch/amsl_velodyne_heightmap.launch"/>
 
