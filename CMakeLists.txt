@@ -7,12 +7,14 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   rospy
   tf
+  pcl_conversions
+  pcl_ros
 )
 
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES wj_gazebo
-#  CATKIN_DEPENDS roscpp sensor_msgs std_msgs
+CATKIN_DEPENDS roscpp sensor_msgs std_msgs
 #  DEPENDS system_lib
 )
 
@@ -22,8 +24,12 @@ include_directories(
 )
 
 add_executable(odom_tf_converter src/odom_tf_converter.cpp)
+add_executable(pointcloud_tf_changer_node src/pointcloud_tf_changer.cpp)
 
 target_link_libraries(odom_tf_converter
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(pointcloud_tf_changer_node
   ${catkin_LIBRARIES}
 )
 
