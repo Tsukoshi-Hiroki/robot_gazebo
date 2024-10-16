@@ -113,7 +113,7 @@
 
     </group>
 
-
+    <!-- Pointcloud Merge -->
     <node pkg="localmap_creator" type="pc_merger" name="pc_merger" output="screen">
         <param name="hz" value="50"/>
         <param name="cloud_num" value="2"/>
