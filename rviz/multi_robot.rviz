@@ -6,8 +6,7 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /PointCloud23
-        - /PointCloud24
+        - /PointCloud25
       Splitter Ratio: 0.5
     Tree Height: 725
   - Class: rviz/Selection
@@ -200,7 +199,7 @@ Visualization Manager:
       Color: 255; 255; 255
       Color Transformer: FlatColor
       Decay Time: 0
-      Enabled: true
+      Enabled: false
       Invert Rainbow: false
       Max Color: 255; 255; 255
       Min Color: 0; 0; 0
@@ -215,12 +214,40 @@ Visualization Manager:
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
-      Value: true
+      Value: false
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 1.169913411140442
-        Min Value: 0.0010293306550011039
+        Max Value: 2.4997308254241943
+        Min Value: -0.0045803990215063095
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: AxisColor
+      Decay Time: 0
+      Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: PointCloud2
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic: /kobuki_2/velodyne_obstacles/transformed
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 2.515564203262329
+        Min Value: -0.0044774399138987064
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -239,7 +266,7 @@ Visualization Manager:
       Size (Pixels): 3
       Size (m): 0.009999999776482582
       Style: Flat Squares
-      Topic: /kobuki_2/velodyne_obstacles/transformed
+      Topic: /merged_velodyne
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
@@ -272,7 +299,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 11.3663330078125
+      Distance: 19.440685272216797
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -280,9 +307,9 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0.45627206563949585
-        Y: -0.3472375273704529
-        Z: -0.0015418461989611387
+        X: -0.22199662029743195
+        Y: -0.6259660720825195
+        Z: 1.822952151298523
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
@@ -290,7 +317,7 @@ Visualization Manager:
       Near Clip Distance: 0.009999999776482582
       Pitch: 1.5697963237762451
       Target Frame: <Fixed Frame>
-      Yaw: 0.0050014303997159
+      Yaw: 3.1931896209716797
     Saved: ~
 Window Geometry:
   Displays:
